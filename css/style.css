@@ -64,15 +64,17 @@ main #my-jumbotron .my-content-1 button {
     width: max-content;
 }
 
-main #enroll {
+/* con questo faccio sia enroll che gallery */
+main .my-stripe {
     height: 80px;
     background-color: purple;
 }
-main #enroll .my-wrapper {
+main .my-stripe .my-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+/* /con questo faccio sia enroll che gallery */
 
 main #welcome {
     background-color: pink;
@@ -93,5 +95,114 @@ main #overview .my-content-1 {
 main #overview .my-content-1 > * {
     margin: 0;
     padding: 0;
+}
+
+main #classes {
+    background-color: lightgrey;
+}
+main #classes [class*="my-content-1-"] {
+    position: relative;
+    height: 100px;
+    margin-bottom: 20px;
+}
+main #classes .my-content-1-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: maroon;
+}
+main #classes .my-content-1-right {
+    background-color: mediumaquamarine;
+}
+main #classes .my-content-1-right button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+main #classes .my-content-2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+main #goal {
+    background-color: mediumslateblue;
+}
+main #goal .my-row {
+    height: 400px;
+}
+main #goal .my-content-1 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main #goal .my-col {
+    height: 200px;
+}
+
+main #images {
+    height: 200px;
+    background-color: black;
+}
+
+/* gallery è insieme a enroll */
+
+main #slider {
+    height: 300px;
+    background-color: mediumspringgreen;
+}
+main #slider .my-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main #slider hr {
+    width: 50px;
+    border: 1px solid black;
+}
+
+main #new {
+    background-color: mediumvioletred;
+}
+main .col-xs-4 {
+    background-color: olivedrab;
+}
+
+footer #map {
+    position: relative;
+}
+footer #map img {
+    width: calc(100% / 7);
+    float: left;
+}
+footer #map > div:not(:first-child) {
+    position: absolute;
+}
+footer #map #satellite {
+    bottom: 0;
+}
+footer #map #zoom {
+    right: 0;
+    bottom: 0;
+}
+
+footer #contacts {
+    background-color: orange;
+}
+footer #contacts .my-row,
+footer #contacts textarea {
+    height: 200px;
+}
+footer #contacts textarea {
+    width: 100%;
+}
+footer #contacts .col-xs-3 {
+    background-color: orchid;
+}
+footer #contacts .my-content-1 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 /* /selettori specifici */
