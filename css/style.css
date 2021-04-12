@@ -1,0 +1,73 @@
+/* selettori preliminari */
+
+/* /selettori preliminari */
+
+/* selettori generici */
+.my-wrapper {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+/* /selettori generici */
+
+/* selettori specifici */
+header #my-header-nav {
+    height: 80px;
+    background-color: yellow;
+}
+header #my-header-logo {
+    height: 100%;
+}
+header .my-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+header ul {
+    /* bootstrap dice 10px */
+    margin-bottom: 0;
+}
+header ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+main #my-jumbotron {
+    position: relative;
+    background-color: teal;
+    /* mettere come sfondo immagine pattern sfumato */
+}
+main #my-jumbotron #my-jumbotron-background-imgs {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+}
+main #my-jumbotron [class*="my-content-"] {
+    height: 400px;
+    display: flex;
+}
+main #my-jumbotron .my-content-1 {
+    flex-direction: column;
+    justify-content: center;
+    background-color: violet;
+}
+main #my-jumbotron .my-content-2 {
+    align-items: flex-end;
+    background-color: lightblue;
+}
+main #my-jumbotron .my-content-1 button {
+    width: max-content;
+}
+
+main #enroll {
+    height: 80px;
+    background-color: purple;
+}
+main #enroll .my-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* /selettori specifici */
