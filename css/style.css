@@ -1,3 +1,6 @@
+/*  appunti:
+    - my-content-1 ecc sono classi che hanno caratteristiche specifiche, ma vengono richimate solo all'interno delle specifiche sezioni. ho usato classi e non id perchè mi faceva comodo che avessero lo stesso nome, perchè vogliono dire la stessa cosa anche se hanno caratteristiche diverse (magari è comodo che una sia display flex e un'altro no) */
+
 /* selettori preliminari */
 
 /* /selettori preliminari */
@@ -69,5 +72,26 @@ main #enroll .my-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+main #welcome {
+    background-color: pink;
+}
+
+main #overview {
+    background-color: lightsalmon;
+}
+main #overview .my-row {
+    height: 400px;
+}
+main #overview .my-content-1 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main #overview .my-content-1 > * {
+    margin: 0;
+    padding: 0;
 }
 /* /selettori specifici */
