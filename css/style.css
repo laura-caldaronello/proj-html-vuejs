@@ -199,6 +199,13 @@ body {
     color: #554e9e;
     text-transform: capitalize;
 }
+
+.my-slider-buttons div {
+    height: 10px;
+    width: 30px;
+    margin: 5px;
+    border: 2px solid;
+}
 /* /selettori generici */
 
 /* selettori specifici */
@@ -335,12 +342,9 @@ main #my-jumbotron .my-content-1 button {
 main #my-jumbotron .my-content-2 {
     align-items: flex-end;
 }
-main #my-jumbotron .my-content-2 div {
-    height: 10px;
-    width: 30px;
-    margin: 5px;
+main #my-jumbotron .my-slider-buttons div {
     margin-bottom: 20px;
-    border: 2px solid #fe6601;
+    border-color: #fe6601;
 }
 main #my-jumbotron .my-content-2 div.active {
     margin-bottom: 30px;
@@ -462,24 +466,51 @@ main #goal .my-col {
 }
 
 main #images {
-    height: 200px;
-    background-color: black;
+    min-width: 1200px;
+}
+main #images .col-xs-3 {
+    padding: 0;
+}
+main #images img {
+    width: 100%;
 }
 
-/* gallery è insieme a enroll */
+main #gallery {
+    background-image: url('../img/images/main/pattern.png');
+}
 
 main #slider {
-    height: 300px;
-    background-color: mediumspringgreen;
+    background-image: url('../img/images/main/parallax_02.jpg');
+    background-size: cover;
+    background-position-y: center;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
 }
 main #slider .my-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 15px;
+}
+main #slider .my-circle-icon {
+    height: 50px;
+    width: 50px;
+    border: 2px solid white;
+    margin: 0 auto;
 }
 main #slider hr {
     width: 50px;
-    border: 1px solid black;
+    border: 1px solid white;
+}
+main #slider h6 {
+    margin-bottom: 30px;
+}
+main #slider .my-slider-buttons div {
+    display: inline-block;
+}
+main #slider .my-slider-buttons div.active {
+    margin-bottom: 15px;
 }
 
 main #new {
