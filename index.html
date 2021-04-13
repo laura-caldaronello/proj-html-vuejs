@@ -21,7 +21,14 @@
                     <img id="my-header-logo" alt="Brand" src="img/images/logo.png">
                         </a>
                     <ul>
-                        <li><a href="#">Links</a></li>
+                        <li v-for="name in header.links.names">
+                            <a href="#">
+                                <div>
+                                    <img :src="header.links.pathStart + name + header.links.pathEnd">
+                                </div>
+                                <span>{{name}}</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -430,20 +437,7 @@
             <!-- map -->
             <section id="map" class="clearfix">
                 <div>
-                    <img src="img/images/map/1 16.png" alt="">
-                    <img src="img/images/map/2 13.png" alt="">
-                    <img src="img/images/map/3 0.png" alt="">
-                    <img src="img/images/map/4 2.png" alt="">
-                    <img src="img/images/map/5 5.png" alt="">
-                    <img src="img/images/map/6 10.png" alt="">
-                    <img src="img/images/map/7 19.png" alt="">
-                    <img src="img/images/map/8 15.png" alt="">
-                    <img src="img/images/map/9 8.png" alt="">
-                    <img src="img/images/map/10 9.png" alt="">
-                    <img src="img/images/map/11 6.png" alt="">
-                    <img src="img/images/map/12 7.png" alt="">
-                    <img src="img/images/map/13 11.png" alt="">
-                    <img src="img/images/map/14 20.png" alt="">
+                    <img v-for="number in footer.map.nImages" :src="footer.map.pathStart + number + footer.map.pathEnd">
                 </div>
                 <div id="coordinates">coordinate</div>
                 <div id="satellite">satellite</div>
@@ -458,25 +452,10 @@
                             <span>titles</span>
                         </div>
                         <div class="row">
-                            <div class="col-xs-3">
-                                <img src="img/images/mobile.png" alt="">
-                                <p>text</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="img/images/mobile.png" alt="">
-                                <p>text</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="img/images/mobile.png" alt="">
-                                <p>text</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="img/images/mobile.png" alt="">
-                                <p>text</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <div v-for="(contact,index) in footer.contacts.contents" class="col-xs-3">
+                                <img :src="footer.contacts.pathStart + (index + 1) + footer.contacts.pathEnd">
+                                <div>{{contact.name}}</div>
+                                <p v-for="line in contact.text">{{line}}</p>
                             </div>
                         </div>
                         <div class="row my-row">
