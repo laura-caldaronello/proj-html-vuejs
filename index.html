@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Lato:wght@300;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -21,7 +23,7 @@
                     <img id="my-header-logo" alt="Brand" src="img/images/logo.png">
                         </a>
                     <ul>
-                        <li v-for="name in header.links.names">
+                        <li v-for="(name,index) in header.links.names" :class="(index == header.links.active)? 'active' : ''">
                             <a href="#">
                                 <div>
                                     <img :src="header.links.pathStart + name + header.links.pathEnd">
@@ -39,17 +41,31 @@
         <!-- nb: le section sono definite dallo sfondo al di fuori del wrapper -->
         <main>
             <!-- jumbotron -->
-            <section id="my-jumbotron">
-                <span id="my-jumbotron-background-imgs">a questo livello composizione immagini position absolute</span>
+            <section id="my-jumbotron" style="background-image: url('img/images/main/jumbotron/slider_slide2_background.png');">
+                <div id="my-jumbotron-background-icons">
+                    <img src="img/images/main/jumbotron/slider_icon10.png">
+                    <img src="img/images/main/jumbotron/slider_icon11.png">
+                    <img src="img/images/main/jumbotron/slider_icon13.png">
+                    <img src="img/images/main/jumbotron/slider_icon14.png">
+                    <img src="img/images/main/jumbotron/slider_icon12.png">
+                </div>
+                <div id="my-jumbotron-background-imgs">
+                    <img src="img/images/main/jumbotron/slider_slide2_img2.png">
+                    <img src="img/images/main/jumbotron/slider_slide2_img1.png">
+                </div>
                 <div class="my-wrapper">
                     <div class="container-fluid clearfix">
                         <div class="row">
                             <div class="col-xs-5 my-content-1">
-                                <span>titles</span>
-                                <button>buy this theme now</button>
+                                <h2>friendly atmosphere</h2>
+                                <h1>welcoming place</h1>
+                                <h1>for every child</h1>
+                                <button class="my-button-orange">buy this theme now</button>
                             </div>
                             <div class="col-xs-2 my-content-2">
-                                <span>pulsantini</span>
+                                <div></div>
+                                <div class="active"></div>
+                                <div></div>
                             </div>
                         </div>
                     </div>

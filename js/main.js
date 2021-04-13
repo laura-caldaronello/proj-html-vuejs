@@ -4,6 +4,7 @@ var app = new Vue({
         header: {
             links: {
                 names: ['home','pages','blog','shop','shortcodes','support','contact'],
+                active: 0,
                 pathStart: 'img/icons/header/',
                 pathEnd: '.png'
             }

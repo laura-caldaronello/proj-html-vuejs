@@ -7,23 +7,33 @@
 
 /* selettori generici */
 .my-wrapper {
-    width: 80%;
+    width: 70%;
+    min-width: 800px;
     height: 100%;
     margin: 0 auto;
+}
+
+.my-button-orange {
+    padding: 10px;
+    background-color: #fe6601;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    border: none;
 }
 /* /selettori generici */
 
 /* selettori specifici */
 header #my-header-nav {
     height: 80px;
-    background-color: yellow;
+    background-color: white;
 }
 header #my-header-logo {
     height: 100%;
 }
 header .my-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: center;
 }
 header ul {
@@ -40,8 +50,24 @@ header ul li a {
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    padding: 10px;
+    padding: 10px 20px;
     text-transform: capitalize;
+    color: #554e9e;
+}
+header ul li:hover,
+header ul li.active {
+    background-color: #fe6601;
+}
+header ul li:hover a,
+header ul li.active a {
+    color: white;
+}
+header ul li:hover a img,
+header ul li.active a img {
+    object-position: 50% -25px;
+}
+header ul li a:hover {
+    text-decoration: none;
 }
 header ul li a div {
     height: 25px;
@@ -50,18 +76,55 @@ header ul li a div {
 }
 header ul li a img {
     width: 100%;
-    object-position: top;
+    object-position: 50% 0%;
 }
 
 main #my-jumbotron {
     position: relative;
-    background-color: teal;
-    /* mettere come sfondo immagine pattern sfumato */
+    background-size: contain;
 }
-main #my-jumbotron #my-jumbotron-background-imgs {
+main #my-jumbotron #my-jumbotron-background-icons img {
     position: absolute;
-    right: 10px;
+    height: 13%;
+}
+main #my-jumbotron #my-jumbotron-background-icons img:nth-child(1) {
+    position: absolute;
+    top: 9%;
+    left: 37%;
+}
+main #my-jumbotron #my-jumbotron-background-icons img:nth-child(2) {
+    position: absolute;
+    top: 9%;
+    left: 45%;
+}
+main #my-jumbotron #my-jumbotron-background-icons img:nth-child(3) {
+    position: absolute;
+    top: 11%;
+    left: 55%;
+}
+main #my-jumbotron #my-jumbotron-background-icons img:nth-child(4) {
+    position: absolute;
+    height: 7%;
+    top: 25%;
+    left: 43%;
+}
+main #my-jumbotron #my-jumbotron-background-icons img:nth-child(5) {
+    position: absolute;
+    top: 22%;
+    left: 49%;
+}
+main #my-jumbotron #my-jumbotron-background-imgs img {
+    position: absolute;
     top: 50%;
+    transform: translateY(-50%);
+}
+main #my-jumbotron #my-jumbotron-background-imgs img:nth-child(2) {
+    height: 90%;
+    left: 50%;
+}
+main #my-jumbotron #my-jumbotron-background-imgs img:nth-child(1) {
+    height: 80%;
+    right: 10%;
 }
 main #my-jumbotron [class*="my-content-"] {
     height: 400px;
@@ -70,11 +133,40 @@ main #my-jumbotron [class*="my-content-"] {
 main #my-jumbotron .my-content-1 {
     flex-direction: column;
     justify-content: center;
-    background-color: violet;
+}
+main #my-jumbotron .my-content-1 h2 {
+    font-family: 'Handlee', cursive;
+    color: #fe6601;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+main #my-jumbotron .my-content-1 h1 {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    margin: 0;
+    color: #554e9e;
+}
+main #my-jumbotron .my-content-1 h1:nth-child(2) {
+    font-weight: 900;
+}
+main #my-jumbotron .my-content-1 h1:nth-child(3) {
+    font-weight: 300;
+}
+main #my-jumbotron .my-content-1 button {
+    margin: 20px 0;
 }
 main #my-jumbotron .my-content-2 {
     align-items: flex-end;
-    background-color: lightblue;
+}
+main #my-jumbotron .my-content-2 div {
+    height: 10px;
+    width: 30px;
+    margin: 5px;
+    margin-bottom: 20px;
+    border: 2px solid #fe6601;
+}
+main #my-jumbotron .my-content-2 div.active {
+    margin-bottom: 30px;
 }
 main #my-jumbotron .my-content-1 button {
     width: max-content;
