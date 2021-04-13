@@ -15,19 +15,45 @@ body {
     margin: 0 auto;
 }
 
+.my-card,
 [class*="my-button-"] {
     padding: 10px;
-    text-transform: uppercase;
-    font-size: 0.8em;
     color: white;
+    
 }
-.my-button-orange {
+[class*="my-button-"] {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+.my-card {
+    display: inline-block;
+    text-transform: capitalize;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.my-button-orange,
+.my-card.active {
+    position: relative;
     background-color: #fe6601;
     border: none;
+}
+.my-card.active::after {
+    position: absolute;
+    content: '';
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fe6601;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .my-button-transparent {
     background-color: transparent;
     border: 2px solid white;
+}
+.my-card:not(.active) {
+    background-color: transparent;
+    color: grey;
 }
 
 .my-standard-title {
@@ -69,6 +95,29 @@ body {
     font-weight: bold;
 }
 .my-welcome-element p {
+    color: grey;
+}
+
+.my-overview-element .col-xs-3 div {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background-color: #fe6601;
+}
+.my-overview-element .col-xs-3 img {
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.my-overview-element .col-xs-9 h4 {
+    margin-top: 0;
+    color: #554e9e;
+    text-transform: capitalize;
+}
+.my-overview-element .col-xs-9 p {
     color: grey;
 }
 /* /selettori generici */
@@ -257,11 +306,12 @@ main .my-stripe button img {
 
 main #welcome {
     background-color: white;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
 }
 
 main #overview {
-    background-color: lightsalmon;
+    background-color: #e8e6e7;
+    padding: 50px 0;
 }
 main #overview .my-row {
     height: 400px;
@@ -275,6 +325,40 @@ main #overview .my-content-1 {
 main #overview .my-content-1 > * {
     margin: 0;
     padding: 0;
+}
+main #overview .my-content-1 h3 {
+    color: #554e9e;
+}
+main #overview .my-content-2 [class*="col-xs-"] {
+    position: relative;
+    padding: 5px;
+}
+main #overview .my-content-2 .col-xs-12 img:not(.my-chevron) {
+    width: 100%;
+}
+main #overview .my-content-2 .col-xs-4 img {
+    width: 100%;
+    padding-bottom: 10px;
+}
+main #overview .my-content-2 .col-xs-4.active img {
+    border-bottom: 2px solid #fe6601;
+}
+main #overview .my-content-2 img.my-chevron {
+    position: absolute;
+    background-color: #fe6601;
+    height: 15%;
+}
+main #overview .my-content-2 img.my-chevron:first-child {
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(-90deg);
+}
+main #overview .my-content-2 img.my-chevron:last-child {
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(90deg);
 }
 
 main #classes {
@@ -344,7 +428,7 @@ main #slider hr {
 main #new {
     background-color: mediumvioletred;
 }
-main .col-xs-4 {
+main #new .col-xs-4 {
     background-color: olivedrab;
 }
 
