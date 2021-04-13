@@ -1,5 +1,5 @@
 /*  appunti:
-    - my-content-1 ecc sono classi che hanno caratteristiche specifiche, ma vengono richimate solo all'interno delle specifiche sezioni. ho usato classi e non id perchè mi faceva comodo che avessero lo stesso nome, perchè vogliono dire la stessa cosa anche se hanno caratteristiche diverse (magari è comodo che una sia display flex e un'altro no) */
+    - my-content-1 ecc e my-chevron sono classi che hanno caratteristiche specifiche, ma vengono richimate solo all'interno delle specifiche sezioni. ho usato classi e non id perchè mi faceva comodo che avessero lo stesso nome, perchè vogliono dire la stessa cosa anche se hanno caratteristiche diverse (magari è comodo che una sia display flex e un'altro no) */
 
 /* selettori preliminari */
 body {
@@ -54,6 +54,24 @@ body {
 .my-card:not(.active) {
     background-color: transparent;
     color: grey;
+}
+
+[class*="my-button-"] div.my-chevron {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+    height: 15px;
+    width: 10px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+[class*="my-button-"] div.my-chevron img {
+    position: absolute;
+    left: -10px;
+    top: -8px;
+    transform: rotate(90deg);
+    height: 30px;
+    width: 30px;
 }
 
 .my-standard-title {
@@ -119,6 +137,58 @@ body {
 }
 .my-overview-element .col-xs-9 p {
     color: grey;
+}
+
+.my-classes-card [class*="my-content-1-"] {
+    position: relative;
+    height: 130px;
+    margin: 20px 0;
+}
+.my-classes-card .my-content-1-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #554e9e;
+    padding: 10px;
+}
+.my-classes-card .my-content-1-left h4 {
+    color: white;
+    margin: 0;
+    text-transform: capitalize;
+}
+.my-classes-card .my-content-1-left h5 {
+    color: white;
+    margin: 5px 0;
+    text-transform: capitalize;
+}
+.my-classes-card .my-content-1-left h6 {
+    color: #e8e6e7;
+    margin: 5px 0;
+    text-transform: capitalize;
+}
+.my-classes-card .my-content-1-right {
+    padding: 0;
+    background-color: grey;
+    overflow: hidden;
+}
+.my-classes-card .my-content-1-right img:not(.my-chevron > *) {
+    width: 100%;
+}
+.my-classes-card .my-content-1-right button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.my-classes-card .my-content-2 {
+    display: flex;
+    justify-content: center;
+}
+.my-classes-card .my-content-2 div {
+    padding: 0 10px;
+    text-align: center;
+} 
+.my-classes-card .my-content-2 div:first-child {
+    border-right: 1px solid #e8e6e7;
 }
 /* /selettori generici */
 
@@ -285,23 +355,6 @@ main .my-stripe .my-wrapper {
 main .my-stripe h3 {
     margin: 0;
 }
-main .my-stripe button div {
-    position: relative;
-    display: inline-block;
-    margin-left: 5px;
-    height: 15px;
-    width: 10px;
-    vertical-align: middle;
-    overflow: hidden;
-}
-main .my-stripe button img {
-    position: absolute;
-    left: -10px;
-    top: -8px;
-    transform: rotate(90deg);
-    height: 30px;
-    width: 30px;
-}
 /* /con questo faccio sia enroll che gallery */
 
 main #welcome {
@@ -362,30 +415,11 @@ main #overview .my-content-2 img.my-chevron:last-child {
 }
 
 main #classes {
-    background-color: lightgrey;
+    background-color: white;
 }
-main #classes [class*="my-content-1-"] {
-    position: relative;
-    height: 100px;
-    margin-bottom: 20px;
-}
-main #classes .my-content-1-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: maroon;
-}
-main #classes .my-content-1-right {
-    background-color: mediumaquamarine;
-}
-main #classes .my-content-1-right button {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-main #classes .my-content-2 {
-    display: flex;
-    justify-content: space-around;
+main #classes h3 {
+    color: #554e9e;
+    margin: 0;
 }
 
 main #goal {
