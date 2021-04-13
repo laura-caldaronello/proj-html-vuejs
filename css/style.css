@@ -2,7 +2,9 @@
     - my-content-1 ecc sono classi che hanno caratteristiche specifiche, ma vengono richimate solo all'interno delle specifiche sezioni. ho usato classi e non id perchè mi faceva comodo che avessero lo stesso nome, perchè vogliono dire la stessa cosa anche se hanno caratteristiche diverse (magari è comodo che una sia display flex e un'altro no) */
 
 /* selettori preliminari */
-
+body {
+    font-family: 'Lato', sans-serif;
+}
 /* /selettori preliminari */
 
 /* selettori generici */
@@ -13,13 +15,61 @@
     margin: 0 auto;
 }
 
-.my-button-orange {
+[class*="my-button-"] {
     padding: 10px;
-    background-color: #fe6601;
-    color: white;
     text-transform: uppercase;
     font-size: 0.8em;
+    color: white;
+}
+.my-button-orange {
+    background-color: #fe6601;
     border: none;
+}
+.my-button-transparent {
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.my-standard-title {
+    text-align: center;
+    margin: 20px 0 40px;
+}
+.my-standard-title h1 {
+    color: #554e9e;
+}
+.my-standard-title h5 {
+    color: grey;
+}
+
+.my-welcome-element {
+    text-align: center;
+}
+.my-welcome-element div {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+    margin: 0 auto;
+}
+.my-welcome-element:nth-child(2n + 1) div {
+    background-color: #fe6601;
+}
+.my-welcome-element:nth-child(2n + 0) div {
+    background-color: #554e9e;
+}
+.my-welcome-element div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.my-welcome-element h4 {
+    text-transform: capitalize;
+    color: #554e9e;
+    font-weight: bold;
+}
+.my-welcome-element p {
+    color: grey;
 }
 /* /selettori generici */
 
@@ -141,7 +191,6 @@ main #my-jumbotron .my-content-1 h2 {
     margin: 5px 0;
 }
 main #my-jumbotron .my-content-1 h1 {
-    font-family: 'Lato', sans-serif;
     text-transform: capitalize;
     margin: 0;
     color: #554e9e;
@@ -175,17 +224,40 @@ main #my-jumbotron .my-content-1 button {
 /* con questo faccio sia enroll che gallery */
 main .my-stripe {
     height: 80px;
-    background-color: purple;
+    background-color: #554e9e;
+    color: white;
 }
 main .my-stripe .my-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px;
+}
+main .my-stripe h3 {
+    margin: 0;
+}
+main .my-stripe button div {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+    height: 15px;
+    width: 10px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+main .my-stripe button img {
+    position: absolute;
+    left: -10px;
+    top: -8px;
+    transform: rotate(90deg);
+    height: 30px;
+    width: 30px;
 }
 /* /con questo faccio sia enroll che gallery */
 
 main #welcome {
-    background-color: pink;
+    background-color: white;
+    margin-bottom: 40px;
 }
 
 main #overview {
