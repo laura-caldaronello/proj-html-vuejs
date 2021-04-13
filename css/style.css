@@ -88,11 +88,9 @@ body {
 .my-welcome-element {
     text-align: center;
 }
-.my-welcome-element div {
-    position: relative;
+.my-welcome-element div.my-circle-icon {
     height: 150px;
     width: 150px;
-    border-radius: 75px;
     margin: 0 auto;
 }
 .my-welcome-element:nth-child(2n + 1) div {
@@ -100,12 +98,6 @@ body {
 }
 .my-welcome-element:nth-child(2n + 0) div {
     background-color: #554e9e;
-}
-.my-welcome-element div img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 }
 .my-welcome-element h4 {
     text-transform: capitalize;
@@ -116,19 +108,10 @@ body {
     color: grey;
 }
 
-.my-overview-element .col-xs-3 div {
-    position: relative;
+.my-overview-element .col-xs-3 div.my-circle-icon {
     height: 60px;
     width: 60px;
-    border-radius: 30px;
     background-color: #fe6601;
-}
-.my-overview-element .col-xs-3 img {
-    position: absolute;
-    height: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 }
 .my-overview-element .col-xs-9 h4 {
     margin-top: 0;
@@ -189,6 +172,32 @@ body {
 } 
 .my-classes-card .my-content-2 div:first-child {
     border-right: 1px solid #e8e6e7;
+}
+
+.my-circle-icon {
+    position: relative;
+    border-radius: 50%;
+}
+.my-circle-icon img {
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.my-goal-card {
+    text-align: center;
+}
+.my-goal-card .my-circle-icon {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    margin: 0 auto;
+}
+.my-goal-card h4 {
+    color: #554e9e;
+    text-transform: capitalize;
 }
 /* /selettori generici */
 
@@ -416,6 +425,7 @@ main #overview .my-content-2 img.my-chevron:last-child {
 
 main #classes {
     background-color: white;
+    margin-bottom: 40px;
 }
 main #classes h3 {
     color: #554e9e;
@@ -423,7 +433,8 @@ main #classes h3 {
 }
 
 main #goal {
-    background-color: mediumslateblue;
+    padding: 40px 0;
+    background-color: #e8e6e7;
 }
 main #goal .my-row {
     height: 400px;
@@ -433,6 +444,18 @@ main #goal .my-content-1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+main #goal h3 {
+    color: #554e9e;
+    margin-top: 0;
+}
+main #goal p {
+    color: grey;
+}
+main #goal ul {
+    list-style-image: url('../img/icons/style_1.png');
+    padding-left: 23px;
+    color: grey;
 }
 main #goal .my-col {
     height: 200px;
