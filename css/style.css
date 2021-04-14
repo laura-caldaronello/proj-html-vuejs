@@ -206,6 +206,43 @@ body {
     margin: 5px;
     border: 2px solid;
 }
+
+.my-number {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 5px 10px;
+    background-color: #fe6601;
+    color: white;
+}
+
+.my-new-card h5 + div {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+}
+.my-new-card div:first-of-type img {
+    height: 100%;
+}
+.my-new-card h4 {
+    color: #554e9e;
+}
+.my-new-card hr {
+    margin: 10px 0;
+}
+.my-new-card hr + div span:first-child {
+    margin-right: 10px;
+}
+.my-new-card hr + div img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.my-new-card hr + div h6 {
+    display: inline-block;
+    margin: 0;
+    text-transform: capitalize;
+}
+
 /* /selettori generici */
 
 /* selettori specifici */
@@ -514,10 +551,14 @@ main #slider .my-slider-buttons div.active {
 }
 
 main #new {
-    background-color: mediumvioletred;
+    background-color: white;
+    margin-bottom: 50px;
 }
-main #new .col-xs-4 {
-    background-color: olivedrab;
+main #new .row:nth-child(2) {
+    margin-bottom: 30px;
+}
+main #new .row:nth-child(3) {
+    text-align: center;
 }
 
 footer #map {
