@@ -4,6 +4,7 @@
 /* selettori preliminari */
 body {
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 /* /selettori preliminari */
 
@@ -640,22 +641,39 @@ footer #map .my-zoom {
 }
 
 footer #contacts {
-    background-color: orange;
+    background-color: white;
+    margin-bottom: 40px;
+}
+footer #contacts .my-goal-card p {
+    margin: 0;
+}
+footer #contacts .row:nth-child(2) {
+    margin-bottom: 40px;
 }
 footer #contacts .my-row,
 footer #contacts textarea {
-    height: 200px;
+    height: 150px;
 }
 footer #contacts textarea {
     width: 100%;
-}
-footer #contacts .col-xs-3 {
-    background-color: orchid;
 }
 footer #contacts .my-content-1 {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+footer #contacts input,
+footer #contacts textarea {
+    padding: 5px;
+    border: 1px solid #e8e6e7;
+}
+footer #contacts input::placeholder,
+footer #contacts textarea::placeholder {
+    text-transform: capitalize;
+}
+footer #contacts .row:last-child {
+    margin-top: 20px;
+    text-align: center;
 }
 /* /selettori specifici */
