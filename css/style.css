@@ -56,6 +56,16 @@ body {
     background-color: transparent;
     color: grey;
 }
+.my-button-orange:hover {
+    background-color: #554e9e;
+}
+.my-button-transparent:hover {
+    background-color: white;
+    color: #554e9e;
+}
+.my-button-transparent:hover img {
+    color: #554e9e;
+}
 
 [class*="my-button-"] div.my-chevron {
     position: relative;
