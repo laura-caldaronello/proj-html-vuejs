@@ -547,12 +547,34 @@
         <footer>
             <!-- map -->
             <section id="map" class="clearfix">
-                <div>
+                <div class="my-puzzle">
                     <img v-for="number in footer.map.nImages" :src="footer.map.pathStart + number + footer.map.pathEnd">
                 </div>
-                <div id="coordinates">coordinate</div>
-                <div id="satellite">satellite</div>
-                <div id="zoom">zoom</div>
+                <div class="my-coordinates">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <h5>{{footer.map.coordinates}}</h5>
+                                <h6>{{footer.map.address}}</h6>
+                                <h6>Visualizza mappa più grande</h6>
+                            </div>
+                            <div class="col-xs-3">
+                                <div>
+                                    <img src="img/icons/footer/map/entity11_hdpi.png">
+                                </div>
+                                <h6>Indicazioni</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-satellite">
+                    <img src="img/images/map/kh.jpeg">
+                </div>
+                <div class="my-zoom">
+                    <img src="img/icons/footer/map/image.svg">
+                    <hr>
+                    <img src="img/icons/footer/map/image (1).svg">
+                </div>
             </section>
             <!-- /map -->
             <!-- contacts -->

@@ -243,6 +243,63 @@ body {
     text-transform: capitalize;
 }
 
+.my-coordinates {
+    width: 300px;
+    background-color: white;
+    box-shadow: 1px 1px 2px grey;
+}
+.my-coordinates h5 {
+    font-weight: bold;
+}
+.my-coordinates h5 + h6 {
+    color: grey;
+}
+.my-coordinates :not(h5) + h6 {
+    color: #1bafe4;
+}
+.my-coordinates .col-xs-3 div {
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.my-coordinates .col-xs-3 {
+    overflow-wrap: break-word;
+}
+.my-coordinates .col-xs-3 img {
+    width: 300%;
+}
+.my-satellite {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    border: 2px solid white;
+    overflow: hidden;
+}
+.my-satellite img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.my-zoom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60px;
+    width: 30px;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 1px 1px 2px grey;
+    margin: 10px;
+}
+.my-zoom img {
+    height: 30%;
+}
+.my-zoom hr {
+    margin: 0;
+}
 /* /selettori generici */
 
 /* selettori specifici */
@@ -564,17 +621,20 @@ main #new .row:nth-child(3) {
 footer #map {
     position: relative;
 }
-footer #map img {
+footer #map .my-puzzle img {
     width: calc(100% / 7);
     float: left;
 }
 footer #map > div:not(:first-child) {
     position: absolute;
 }
-footer #map #satellite {
+footer #map .my-coordinates {
+    margin: 10px;
+}
+footer #map .my-satellite {
     bottom: 0;
 }
-footer #map #zoom {
+footer #map .my-zoom {
     right: 0;
     bottom: 0;
 }

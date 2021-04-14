@@ -13,7 +13,9 @@ var app = new Vue({
             map: {
                 nImages: 14,
                 pathStart: 'img/images/map/',
-                pathEnd: '.png'
+                pathEnd: '.png',
+                coordinates: '45\°23\'45\.6\'\'N 75\°40\'35\.6\'\'W',
+                address: '98WF+C9 Nepean, Ottawa, Ontario, Canada'
             },
             contacts: {
                 contents: [
