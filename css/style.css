@@ -1,5 +1,5 @@
 /*  appunti:
-    - my-content-1 ecc e my-chevron sono classi che hanno caratteristiche specifiche, ma vengono richimate solo all'interno delle specifiche sezioni. ho usato classi e non id perchè mi faceva comodo che avessero lo stesso nome, perchè vogliono dire la stessa cosa anche se hanno caratteristiche diverse (magari è comodo che una sia display flex e un'altro no) */
+    my-content-, my-chevron, my-hover sono classi che hanno caratteristiche specifiche, ma vengono richimate solo all'interno delle specifiche sezioni. ho usato classi e non id perchè mi faceva comodo che avessero lo stesso nome, perchè vogliono dire la stessa cosa anche se hanno caratteristiche diverse (magari è comodo che una sia display flex e un'altro no) */
 
 /* selettori preliminari */
 body {
@@ -200,7 +200,7 @@ body {
     overflow: hidden;
 }
 .my-classes-card .my-content-1-right img:not(.my-chevron > *) {
-    height: 100%;
+    height: 110%;
 }
 .my-classes-card .my-content-1-right button {
     position: absolute;
@@ -282,6 +282,9 @@ body {
 }
 .my-coordinates :not(h5) + h6 {
     color: #1bafe4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .my-coordinates .col-xs-3 div {
     height: 20px;
@@ -289,9 +292,6 @@ body {
     overflow: hidden;
     margin: 0 auto;
     margin-top: 10px;
-}
-.my-coordinates .col-xs-3 {
-    overflow-wrap: break-word;
 }
 .my-coordinates .col-xs-3 img {
     width: 300%;
@@ -337,7 +337,6 @@ header .my-wrapper {
     align-content: center;
 }
 header ul {
-    /* bootstrap dice 10px */
     margin-bottom: 0;
 }
 header ul li {
@@ -609,6 +608,7 @@ main #new .row:nth-child(2) {
 
 footer #map {
     position: relative;
+    min-width: 1200px;
 }
 footer #map .my-puzzle img {
     width: calc(100% / 7);
