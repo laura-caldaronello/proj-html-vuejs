@@ -16,6 +16,54 @@ body {
     margin: 0 auto;
 }
 
+.my-invisible {
+    display: none;
+}
+.my-visible {
+    display: block;
+}
+.row.my-hover:hover .my-visible {
+    display: none;
+}
+.row.my-hover:hover .my-invisible {
+    display: block;
+}
+.my-invisible-card .col-xs-6:first-child {
+    text-align: center;
+    background-color: #e8e6e7;
+}
+.my-invisible-card {
+    height: 380px;
+    color: grey;
+}
+.my-invisible-card .col-xs-6 {
+    padding: 0;
+    margin-top: 50px;
+}
+.my-invisible-card h5 {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.my-invisible-card h6 {
+    margin-bottom: 30px;
+}
+.my-invisible-card .col-xs-6:last-child {
+    padding: 15px;
+}
+.my-invisible-card .col-xs-6:last-child > div:first-child {
+    border: 2px solid #fe6601;
+    margin: 15px 0;
+    position: relative;
+    right: 50px;
+    width: 100px;
+    padding: 5px 10px;
+    text-align: right;
+}
+.my-invisible-card img.my-teacher {
+    width: 100%;
+}
+
 .my-card,
 [class*="my-button-"] {
     padding: 10px;
@@ -64,7 +112,7 @@ body {
     color: #554e9e;
 }
 .my-button-transparent:hover img {
-    color: #554e9e;
+    filter: invert(31%) sepia(38%) saturate(917%) hue-rotate(206deg) brightness(95%) contrast(90%);
 }
 
 [class*="my-button-"] div.my-chevron {
@@ -133,9 +181,10 @@ body {
     color: grey;
 }
 
-.my-classes-card [class*="my-content-1-"] {
+.my-classes-card [class*="my-content-1-"]
+ {
     position: relative;
-    height: 130px;
+    height: 150px;
     margin: 20px 0;
 }
 .my-classes-card .my-content-1-left {
@@ -166,7 +215,7 @@ body {
     overflow: hidden;
 }
 .my-classes-card .my-content-1-right img:not(.my-chevron > *) {
-    width: 100%;
+    height: 100%;
 }
 .my-classes-card .my-content-1-right button {
     position: absolute;
@@ -218,22 +267,30 @@ body {
     border: 2px solid;
 }
 
+.my-number,
+.my-icon {
+    background-color: #fe6601;
+    color: white;
+}
 .my-number {
     position: absolute;
     right: 0;
     bottom: 0;
     padding: 5px 10px;
-    background-color: #fe6601;
-    color: white;
+}
+.my-icon {
+    display: inline-block;
+    padding: 0;
 }
 
 .my-new-card h5 + div {
     position: relative;
-    height: 150px;
+    height: 140px;
     overflow: hidden;
 }
 .my-new-card div:first-of-type img {
-    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .my-new-card h4 {
     color: #554e9e;
@@ -576,8 +633,21 @@ main #images {
 main #images .col-xs-3 {
     padding: 0;
 }
+main #images .col-xs-3:hover .my-invisible {
+    display: block;
+}
 main #images img {
     width: 100%;
+}
+main #images .my-circle-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 80px;
+    width: 80px;
+    background-color: #554e9e;
+    opacity: 50%;
 }
 
 main #gallery {
