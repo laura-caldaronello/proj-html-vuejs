@@ -16,6 +16,42 @@ body {
     margin: 0 auto;
 }
 
+.my-margin-0 {
+    margin: 0;
+}
+.my-padding-0 {
+    padding: 0;
+}
+
+.my-color-white {
+    color: white;
+}
+.my-background-color-white {
+    background-color: white;
+}
+.my-color-grey {
+    color: grey;
+}
+.my-background-color-grey {
+    background-color: grey;
+}
+.my-color-orange {
+    color: #fe6601;
+}
+.my-background-color-orange {
+    background-color: #fe6601;
+}
+.my-color-purple {
+    color: #554e9e;
+}
+.my-background-color-purple {
+    background-color: #554e9e;
+}
+
+.my-weight-bold {
+    font-weight: bold;
+}
+
 .my-invisible {
     display: none;
 }
@@ -29,19 +65,15 @@ body {
     display: block;
 }
 .my-invisible-card .col-xs-6:first-child {
-    text-align: center;
     background-color: #e8e6e7;
 }
 .my-invisible-card {
     height: 380px;
-    color: grey;
 }
 .my-invisible-card .col-xs-6 {
-    padding: 0;
     margin-top: 50px;
 }
 .my-invisible-card h5 {
-    font-weight: bold;
     margin-top: 20px;
     margin-bottom: 5px;
 }
@@ -58,7 +90,6 @@ body {
     right: 50px;
     width: 100px;
     padding: 5px 10px;
-    text-align: right;
 }
 .my-invisible-card img.my-teacher {
     width: 100%;
@@ -67,23 +98,19 @@ body {
 .my-card,
 [class*="my-button-"] {
     padding: 10px;
-    color: white;
     
 }
 [class*="my-button-"] {
     font-size: 0.8em;
-    text-transform: uppercase;
 }
 .my-card {
     display: inline-block;
-    text-transform: capitalize;
     padding-left: 20px;
     padding-right: 20px;
 }
 .my-button-orange,
 .my-card.active {
     position: relative;
-    background-color: #fe6601;
     border: none;
 }
 .my-card.active::after {
@@ -102,7 +129,6 @@ body {
 }
 .my-card:not(.active) {
     background-color: transparent;
-    color: grey;
 }
 .my-button-orange:hover {
     background-color: #554e9e;
@@ -134,51 +160,21 @@ body {
 }
 
 .my-standard-title {
-    text-align: center;
     margin: 20px 0 40px;
 }
-.my-standard-title h1 {
-    color: #554e9e;
-}
-.my-standard-title h5 {
-    color: grey;
-}
 
-.my-welcome-element {
-    text-align: center;
-}
 .my-welcome-element div.my-circle-icon {
     height: 150px;
     width: 150px;
     margin: 0 auto;
 }
-.my-welcome-element:nth-child(2n + 1) div {
-    background-color: #fe6601;
-}
-.my-welcome-element:nth-child(2n + 0) div {
-    background-color: #554e9e;
-}
-.my-welcome-element h4 {
-    text-transform: capitalize;
-    color: #554e9e;
-    font-weight: bold;
-}
-.my-welcome-element p {
-    color: grey;
-}
 
 .my-overview-element .col-xs-3 div.my-circle-icon {
     height: 60px;
     width: 60px;
-    background-color: #fe6601;
 }
 .my-overview-element .col-xs-9 h4 {
     margin-top: 0;
-    color: #554e9e;
-    text-transform: capitalize;
-}
-.my-overview-element .col-xs-9 p {
-    color: grey;
 }
 
 .my-classes-card [class*="my-content-1-"]
@@ -191,27 +187,16 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #554e9e;
     padding: 10px;
 }
-.my-classes-card .my-content-1-left h4 {
-    color: white;
-    margin: 0;
-    text-transform: capitalize;
-}
 .my-classes-card .my-content-1-left h5 {
-    color: white;
     margin: 5px 0;
-    text-transform: capitalize;
 }
 .my-classes-card .my-content-1-left h6 {
     color: #e8e6e7;
     margin: 5px 0;
-    text-transform: capitalize;
 }
 .my-classes-card .my-content-1-right {
-    padding: 0;
-    background-color: grey;
     overflow: hidden;
 }
 .my-classes-card .my-content-1-right img:not(.my-chevron > *) {
@@ -228,7 +213,6 @@ body {
 }
 .my-classes-card .my-content-2 div {
     padding: 0 10px;
-    text-align: center;
 } 
 .my-classes-card .my-content-2 div:first-child {
     border-right: 1px solid #e8e6e7;
@@ -246,18 +230,10 @@ body {
     transform: translate(-50%,-50%);
 }
 
-.my-goal-card {
-    text-align: center;
-}
 .my-goal-card .my-circle-icon {
     height: 50px;
     width: 50px;
-    background-color: white;
     margin: 0 auto;
-}
-.my-goal-card h4 {
-    color: #554e9e;
-    text-transform: capitalize;
 }
 
 .my-slider-buttons div {
@@ -267,11 +243,6 @@ body {
     border: 2px solid;
 }
 
-.my-number,
-.my-icon {
-    background-color: #fe6601;
-    color: white;
-}
 .my-number {
     position: absolute;
     right: 0;
@@ -280,7 +251,6 @@ body {
 }
 .my-icon {
     display: inline-block;
-    padding: 0;
 }
 
 .my-new-card h5 + div {
@@ -291,9 +261,6 @@ body {
 .my-new-card div:first-of-type img {
     width: 100%;
     object-fit: cover;
-}
-.my-new-card h4 {
-    color: #554e9e;
 }
 .my-new-card hr {
     margin: 10px 0;
@@ -307,20 +274,11 @@ body {
 }
 .my-new-card hr + div h6 {
     display: inline-block;
-    margin: 0;
-    text-transform: capitalize;
 }
 
 .my-coordinates {
     width: 300px;
-    background-color: white;
     box-shadow: 1px 1px 2px grey;
-}
-.my-coordinates h5 {
-    font-weight: bold;
-}
-.my-coordinates h5 + h6 {
-    color: grey;
 }
 .my-coordinates :not(h5) + h6 {
     color: #1bafe4;
@@ -358,22 +316,17 @@ body {
     height: 60px;
     width: 30px;
     padding: 5px;
-    background-color: white;
     box-shadow: 1px 1px 2px grey;
     margin: 10px;
 }
 .my-zoom img {
     height: 30%;
 }
-.my-zoom hr {
-    margin: 0;
-}
 /* /selettori generici */
 
 /* selettori specifici */
 header #my-header-nav {
     height: 80px;
-    background-color: white;
 }
 header #my-header-logo {
     height: 100%;
@@ -388,7 +341,6 @@ header ul {
     margin-bottom: 0;
 }
 header ul li {
-    display: inline-block;
     height: 100%;
 }
 header ul li a {
@@ -398,15 +350,11 @@ header ul li a {
     align-items: center;
     height: 100%;
     padding: 10px 20px;
-    text-transform: capitalize;
-    color: #554e9e;
 }
-header ul li:hover,
-header ul li.active {
+header ul li:hover {
     background-color: #fe6601;
 }
-header ul li:hover a,
-header ul li.active a {
+header ul li:hover a {
     color: white;
 }
 header ul li:hover a img,
@@ -429,6 +377,7 @@ header ul li a img {
 main #my-jumbotron {
     position: relative;
     background-size: contain;
+    background-image: url('../img/images/main/jumbotron/slider_slide2_background.png');
 }
 main #my-jumbotron #my-jumbotron-background-icons img {
     position: absolute;
@@ -483,14 +432,7 @@ main #my-jumbotron .my-content-1 {
 }
 main #my-jumbotron .my-content-1 h2 {
     font-family: 'Handlee', cursive;
-    color: #fe6601;
-    text-transform: capitalize;
     margin: 5px 0;
-}
-main #my-jumbotron .my-content-1 h1 {
-    text-transform: capitalize;
-    margin: 0;
-    color: #554e9e;
 }
 main #my-jumbotron .my-content-1 h1:nth-child(2) {
     font-weight: 900;
@@ -518,8 +460,6 @@ main #my-jumbotron .my-content-1 button {
 /* con questo faccio sia enroll che gallery */
 main .my-stripe {
     height: 80px;
-    background-color: #554e9e;
-    color: white;
 }
 main .my-stripe .my-wrapper {
     display: flex;
@@ -527,13 +467,9 @@ main .my-stripe .my-wrapper {
     align-items: center;
     padding: 15px;
 }
-main .my-stripe h3 {
-    margin: 0;
-}
 /* /con questo faccio sia enroll che gallery */
 
 main #welcome {
-    background-color: white;
     padding-bottom: 40px;
 }
 
@@ -549,13 +485,6 @@ main #overview .my-content-1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-main #overview .my-content-1 > * {
-    margin: 0;
-    padding: 0;
-}
-main #overview .my-content-1 h3 {
-    color: #554e9e;
 }
 main #overview .my-content-2 [class*="col-xs-"] {
     position: relative;
@@ -573,7 +502,6 @@ main #overview .my-content-2 .col-xs-4.active img {
 }
 main #overview .my-content-2 img.my-chevron {
     position: absolute;
-    background-color: #fe6601;
     height: 15%;
 }
 main #overview .my-content-2 img.my-chevron:first-child {
@@ -590,12 +518,7 @@ main #overview .my-content-2 img.my-chevron:last-child {
 }
 
 main #classes {
-    background-color: white;
     margin-bottom: 40px;
-}
-main #classes h3 {
-    color: #554e9e;
-    margin: 0;
 }
 
 main #goal {
@@ -612,16 +535,11 @@ main #goal .my-content-1 {
     justify-content: space-between;
 }
 main #goal h3 {
-    color: #554e9e;
     margin-top: 0;
-}
-main #goal p {
-    color: grey;
 }
 main #goal ul {
     list-style-image: url('../img/icons/style_1.png');
     padding-left: 23px;
-    color: grey;
 }
 main #goal .my-col {
     height: 200px;
@@ -629,9 +547,6 @@ main #goal .my-col {
 
 main #images {
     min-width: 1200px;
-}
-main #images .col-xs-3 {
-    padding: 0;
 }
 main #images .col-xs-3:hover .my-invisible {
     display: block;
@@ -646,7 +561,6 @@ main #images .my-circle-icon {
     transform: translate(-50%,-50%);
     height: 80px;
     width: 80px;
-    background-color: #554e9e;
     opacity: 50%;
 }
 
@@ -658,8 +572,6 @@ main #slider {
     background-image: url('../img/images/main/parallax_02.jpg');
     background-size: cover;
     background-position-y: center;
-    color: white;
-    text-align: center;
     padding: 40px 0;
 }
 main #slider .my-wrapper {
@@ -689,14 +601,10 @@ main #slider .my-slider-buttons div.active {
 }
 
 main #new {
-    background-color: white;
     margin-bottom: 50px;
 }
 main #new .row:nth-child(2) {
     margin-bottom: 30px;
-}
-main #new .row:nth-child(3) {
-    text-align: center;
 }
 
 footer #map {
@@ -721,11 +629,7 @@ footer #map .my-zoom {
 }
 
 footer #contacts {
-    background-color: white;
     margin-bottom: 40px;
-}
-footer #contacts .my-goal-card p {
-    margin: 0;
 }
 footer #contacts .row:nth-child(2) {
     margin-bottom: 40px;
@@ -754,6 +658,5 @@ footer #contacts textarea::placeholder {
 }
 footer #contacts .row:last-child {
     margin-top: 20px;
-    text-align: center;
 }
 /* /selettori specifici */

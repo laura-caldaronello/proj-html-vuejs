@@ -18,13 +18,13 @@
         <!-- header -->
         <!-- per l'header non utilizzo bootstrap perchè non mi piace la sua navbar -->
         <header>
-            <nav id ="my-header-nav">
+            <nav id ="my-header-nav" class="my-background-color-white">
                 <div class="my-wrapper">
                     <img id="my-header-logo" alt="Brand" src="img/images/logo.png">
                         </a>
-                    <ul>
-                        <li v-for="(name,index) in header.links.names" :class="(index == header.links.active)? 'active' : ''">
-                            <a href="#">
+                    <ul class="list-inline">
+                        <li v-for="(name,index) in header.links.names" :class="(index == header.links.active)? 'active my-background-color-orange' : ''">
+                            <a class="text-capitalize" :class="(index == header.links.active)? 'my-color-white' : 'my-color-purple'" href="#">
                                 <div>
                                     <img :src="header.links.pathStart + name + header.links.pathEnd">
                                 </div>
@@ -41,7 +41,7 @@
         <!-- nb: le section sono definite dallo sfondo al di fuori del wrapper -->
         <main>
             <!-- jumbotron -->
-            <section id="my-jumbotron" style="background-image: url('img/images/main/jumbotron/slider_slide2_background.png');">
+            <section id="my-jumbotron">
                 <div id="my-jumbotron-background-icons">
                     <img src="img/images/main/jumbotron/slider_icon10.png">
                     <img src="img/images/main/jumbotron/slider_icon11.png">
@@ -57,10 +57,10 @@
                     <div class="container-fluid clearfix">
                         <div class="row">
                             <div class="col-xs-5 my-content-1">
-                                <h2>friendly atmosphere</h2>
-                                <h1>welcoming place</h1>
-                                <h1>for every child</h1>
-                                <button class="my-button-orange">buy this theme now</button>
+                                <h2 class="text-capitalize my-color-orange">friendly atmosphere</h2>
+                                <h1 class="my-margin-0 text-capitalize my-color-purple">welcoming place</h1>
+                                <h1 class="my-margin-0 text-capitalize my-color-purple">for every child</h1>
+                                <button class="my-button-orange text-uppercase my-color-white my-background-color-orange">buy this theme now</button>
                             </div>
                             <div class="col-xs-2 my-content-2 my-slider-buttons">
                                 <div></div>
@@ -73,10 +73,10 @@
             </section>
             <!-- /jumbotron -->
             <!-- enroll -->
-            <section id="enroll" class="my-stripe">
+            <section id="enroll" class="my-stripe my-color-white my-background-color-purple">
                 <div class="my-wrapper">
-                    <h3>How to Enroll Your Child to a Class?</h3>
-                    <button class="my-button-transparent">
+                    <h3 class="my-margin-0">How to Enroll Your Child to a Class?</h3>
+                    <button class="my-button-transparent text-uppercase my-color-white">
                         learn more
                         <div class="my-chevron">
                             <img src="img/icons/chevron_up.png">
@@ -86,44 +86,44 @@
             </section>
             <!-- /enroll -->
             <!-- welcome -->
-            <section id="welcome">
+            <section id="welcome" class="my-background-color-white">
                 <div class="my-wrapper">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xs-12 my-standard-title">
-                                <h1>Welcome to Fable</h1>
-                                <h5>Fable daycare, preschool, and kindergarten</h5>
+                            <div class="col-xs-12 my-standard-title text-center">
+                                <h1 class="my-color-purple">Welcome to Fable</h1>
+                                <h5 class="my-color-grey">Fable daycare, preschool, and kindergarten</h5>
                                 <img src="img/images/header_divider.png">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-3 my-welcome-element">
-                                <div class="my-circle-icon">
+                            <div class="col-xs-3 my-welcome-element text-center">
+                                <div class="my-circle-icon my-background-color-orange">
                                     <img src="img/icons/main/schoolbag_alt.png">
                                 </div>
-                                <h4>morbi etos</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus aliquam sit aut quibusdam possimus provident iure consectetur?</p>
+                                <h4 class="text-capitalize my-color-purple my-weight-bold">morbi etos</h4>
+                                <p class="my-color-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus aliquam sit aut quibusdam possimus provident iure consectetur?</p>
                             </div>
-                            <div class="col-xs-3 my-welcome-element">
-                                <div class="my-circle-icon">
+                            <div class="col-xs-3 my-welcome-element text-center">
+                                <div class="my-circle-icon my-background-color-purple">
                                     <img src="img/icons/main/stroller_alt.png">
                                 </div>
-                                <h4>congue gravida</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus aliquam sit aut quibusdam possimus provident iure consectetur?</p>
+                                <h4 class="text-capitalize my-color-purple my-weight-bold">congue gravida</h4>
+                                <p class="my-color-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus aliquam sit aut quibusdam possimus provident iure consectetur?</p>
                             </div>
-                            <div class="col-xs-3 my-welcome-element">
-                                <div class="my-circle-icon">
+                            <div class="col-xs-3 my-welcome-element text-center">
+                                <div class="my-circle-icon my-background-color-orange">
                                     <img src="img/icons/main/globe_alt.png">
                                 </div>
-                                <h4>maecenas node</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus aliquam sit aut quibusdam possimus provident iure consectetur?</p>
+                                <h4 class="text-capitalize my-color-purple my-weight-bold">maecenas node</h4>
+                                <p class="my-color-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus aliquam sit aut quibusdam possimus provident iure consectetur?</p>
                             </div>
-                            <div class="col-xs-3 my-welcome-element">
-                                <div class="my-circle-icon">
+                            <div class="col-xs-3 my-welcome-element text-center">
+                                <div class="my-circle-icon my-background-color-purple">
                                     <img src="img/icons/main/bell_alt.png">
                                 </div>
-                                <h4>praesent morbi</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus aliquam sit aut quibusdam possimus provident iure consectetur?</p>
+                                <h4 class="text-capitalize my-color-purple my-weight-bold">praesent morbi</h4>
+                                <p class="my-color-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus aliquam sit aut quibusdam possimus provident iure consectetur?</p>
                             </div>
                         </div>
                     </div>
@@ -136,34 +136,34 @@
                     <div class="container-fluid">
                         <div class="row my-row">
                             <div class="col-xs-6 my-content-1">
-                                <div>
-                                    <div class="my-card active">overview</div>
-                                    <div class="my-card">our mission</div>
+                                <div class="my-margin-0 my-padding-0">
+                                    <div class="my-card active text-capitalize my-color-white my-background-color-orange">overview</div>
+                                    <div class="my-card text-capitalize my-color-grey">our mission</div>
                                 </div>
-                                <h3>Our philosophy is learning through play as we offer a stimulating environment for children.</h3>
-                                <div class="container-fluid my-overview-element">
+                                <h3 class="my-margin-0 my-padding-0 my-color-purple">Our philosophy is learning through play as we offer a stimulating environment for children.</h3>
+                                <div class="my-margin-0 my-padding-0 container-fluid my-overview-element">
                                     <div class="row">
                                         <div class="col-xs-3">
-                                            <div class="my-circle-icon">
+                                            <div class="my-circle-icon my-background-color-orange">
                                                 <img src="img/icons/main/clock_alt.png" alt="">
                                             </div>            
                                         </div>
                                         <div class="col-xs-9">
-                                            <h4>full day session</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At illum commodi minus, voluptates delectus quis quam?</p>
+                                            <h4 class="text-capitalize my-color-purple">full day session</h4>
+                                            <p class="my-color-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. At illum commodi minus, voluptates delectus quis quam?</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="container-fluid my-overview-element">
+                                <div class="my-margin-0 my-padding-0 container-fluid my-overview-element">
                                     <div class="row">
                                         <div class="col-xs-3">
-                                            <div class="my-circle-icon">
+                                            <div class="my-circle-icon my-background-color-orange">
                                                 <img src="img/icons/main/diagram_alt.png" alt="">
                                             </div>            
                                         </div>
                                         <div class="col-xs-9">
-                                            <h4>varied classes</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At illum commodi minus, voluptates delectus quis quam?</p>
+                                            <h4 class="text-capitalize my-color-purple">varied classes</h4>
+                                            <p class="my-color-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. At illum commodi minus, voluptates delectus quis quam?</p>
                                         </div>
                                     </div>
                                 </div>
@@ -172,9 +172,9 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <img class="my-chevron" src="img/icons/chevron_up.png">
+                                            <img class="my-chevron my-background-color-orange" src="img/icons/chevron_up.png">
                                             <img src="img/images/main/overview/gallery_08-690x506.jpg">
-                                            <img class="my-chevron" src="img/icons/chevron_up.png">
+                                            <img class="my-chevron my-background-color-orange" src="img/icons/chevron_up.png">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -196,19 +196,19 @@
             </section>
             <!-- /overview -->
             <!-- classes -->
-            <section id="classes">
+            <section id="classes" class="my-background-color-white">
                 <div class="my-wrapper">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xs-12 my-standard-title">
-                                <h1>Our Classes</h1>
-                                <h5>Our preschool program has four dedicated classes</h5>
+                            <div class="col-xs-12 my-standard-title text-center">
+                                <h1 class="my-color-purple">Our Classes</h1>
+                                <h5 class="my-color-grey">Our preschool program has four dedicated classes</h5>
                                 <img src="img/images/header_divider.png">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-6">
-                                <h3>We provided four classes with nine to twenty children each aged twelve month to five years of age.</h3>
+                                <h3 class="my-margin-0 my-color-purple">We provided four classes with nine to twenty children each aged twelve month to five years of age.</h3>
                             </div>
                             <div class="col-xs-6">
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel itaque, maiores nulla a assumenda dolor eos vitae, illum numquam consequuntur voluptatibus amet cupiditate! Eaque incidunt quia et hic cupiditate sed.</p>
@@ -218,25 +218,25 @@
                             <div class="col-xs-6 my-classes-card my-visible">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-xs-6 my-content-1-left">
+                                        <div class="col-xs-6 my-content-1-left my-background-color-purple">
                                             <div>
-                                                <h4>little lambs</h4>
-                                                <h6>class name</h6>
+                                                <h4 class="my-margin-0 text-capitalize my-color-white">little lambs</h4>
+                                                <h6 class="text-capitalize">class name</h6>
                                             </div>
                                             <div class="my-content-2">
-                                                <div>
-                                                    <h5>12-24</h5>
-                                                    <h6>month olds</h6>
+                                                <div class="text-center">
+                                                    <h5 class="text-capitalize my-color-white">12-24</h5>
+                                                    <h6 class="text-capitalize">month olds</h6>
                                                 </div>
-                                                <div>
-                                                    <h5>9</h5>
-                                                    <h6>class size</h6>
+                                                <div class="text-center">
+                                                    <h5 class="text-capitalize my-color-white">9</h5>
+                                                    <h6 class="text-capitalize">class size</h6>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xs-6 my-content-1-right">
+                                        <div class="col-xs-6 my-padding-0 my-content-1-right my-background-color-grey">
                                             <img src="img/images/main/classes/class_01-690x506.jpg">
-                                            <button class="my-button-orange">
+                                            <button class="my-button-orange text-uppercase my-color-white my-background-color-orange">
                                                 read more
                                                 <div class="my-chevron">
                                                     <img src="img/icons/chevron_up.png">
@@ -249,25 +249,25 @@
                             <div class="col-xs-6 my-classes-card my-visible">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-xs-6 my-content-1-left">
+                                        <div class="col-xs-6 my-content-1-left my-background-color-purple">
                                             <div>
-                                                <h4>bouncy bears</h4>
-                                                <h6>class name</h6>
+                                                <h4 class="my-margin-0 text-capitalize my-color-white">bouncy bears</h4>
+                                                <h6 class="text-capitalize">class name</h6>
                                             </div>
                                             <div class="my-content-2">
-                                                <div>
-                                                    <h5>2-3</h5>
-                                                    <h6>year olds</h6>
+                                                <div class="text-center">
+                                                    <h5 class="text-capitalize my-color-white">2-3</h5>
+                                                    <h6 class="text-capitalize">year olds</h6>
                                                 </div>
-                                                <div>
-                                                    <h5>12</h5>
-                                                    <h6>class size</h6>
+                                                <div class="text-center">
+                                                    <h5 class="text-capitalize my-color-white">12</h5>
+                                                    <h6 class="text-capitalize">class size</h6>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xs-6 my-content-1-right">
+                                        <div class="col-xs-6 my-padding-0 my-content-1-right my-background-color-grey">
                                             <img src="img/images/main/classes/class_02-690x506.jpg">
-                                            <button class="my-button-orange">
+                                            <button class="my-button-orange text-uppercase my-color-white my-background-color-orange">
                                                 read more
                                                 <div class="my-chevron">
                                                     <img src="img/icons/chevron_up.png">
@@ -280,25 +280,25 @@
                             <div class="col-xs-6 my-classes-card my-visible">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-xs-6 my-content-1-left">
+                                        <div class="col-xs-6 my-content-1-left my-background-color-purple">
                                             <div>
-                                                <h4>tenderhearts</h4>
-                                                <h6>class name</h6>
+                                                <h4 class="my-margin-0 text-capitalize my-color-white">tenderhearts</h4>
+                                                <h6 class="text-capitalize">class name</h6>
                                             </div>
                                             <div class="my-content-2">
-                                                <div>
-                                                    <h5>3-4</h5>
-                                                    <h6>year olds</h6>
+                                                <div class="text-center">
+                                                    <h5 class="text-capitalize my-color-white">3-4</h5>
+                                                    <h6 class="text-capitalize">year olds</h6>
                                                 </div>
-                                                <div>
-                                                    <h5>15</h5>
-                                                    <h6>class size</h6>
+                                                <div class="text-center">
+                                                    <h5 class="text-capitalize my-color-white">15</h5>
+                                                    <h6 class="text-capitalize">class size</h6>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xs-6 my-content-1-right">
+                                        <div class="col-xs-6 my-padding-0 my-content-1-right">
                                             <img src="img/images/main/classes/class_03-690x506.jpg">
-                                            <button class="my-button-orange">
+                                            <button class="my-button-orange text-uppercase my-color-white my-background-color-orange">
                                                 read more
                                                 <div class="my-chevron">
                                                     <img src="img/icons/chevron_up.png">
@@ -311,25 +311,25 @@
                             <div class="col-xs-6 my-classes-card my-visible">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-xs-6 my-content-1-left">
+                                        <div class="col-xs-6 my-content-1-left my-background-color-purple">
                                             <div>
-                                                <h4>shining stars</h4>
-                                                <h6>class name</h6>
+                                                <h4 class="my-margin-0 text-capitalize my-color-white">shining stars</h4>
+                                                <h6 class="text-capitalize">class name</h6>
                                             </div>
                                             <div class="my-content-2">
-                                                <div>
-                                                    <h5>4-5</h5>
-                                                    <h6>year olds</h6>
+                                                <div class="text-center">
+                                                    <h5 class="text-capitalize my-color-white">4-5</h5>
+                                                    <h6 class="text-capitalize">year olds</h6>
                                                 </div>
-                                                <div>
-                                                    <h5>20</h5>
-                                                    <h6>class size</h6>
+                                                <div class="text-center">
+                                                    <h5 class="text-capitalize my-color-white">20</h5>
+                                                    <h6 class="text-capitalize">class size</h6>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xs-6 my-content-1-right">
+                                        <div class="col-xs-6 my-padding-0 my-content-1-right">
                                             <img src="img/images/main/classes/class_04-690x506.jpg">
-                                            <button class="my-button-orange">
+                                            <button class="my-button-orange text-uppercase my-color-white my-background-color-orange">
                                                 read more
                                                 <div class="my-chevron">
                                                     <img src="img/icons/chevron_up.png">
@@ -339,29 +339,29 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-6 my-invisible my-invisible-card">
+                            <div class="col-xs-6 my-invisible my-invisible-card my-color-grey">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-xs-6">
+                                        <div class="col-xs-6 text-center my-padding-0">
                                             <div>
                                                 <img class="my-teacher" src="img/images/main/classes/team_04.jpg">
-                                                <h5>Ruth Richie</h5>
+                                                <h5 class="my-weight-bold">Ruth Richie</h5>
                                                 <h6>Teacher</h6>
                                             </div>
                                         </div>
                                         <div class="col-xs-6">
-                                            <div>
+                                            <div class="text-right">
                                                 <img src="img/images/quote.png">
                                             </div>
                                             <p>I have just finished my studies in Early Childhood Education, and I am also the kid's yoga teacher here at Fable. I enjoy cooking, swimming and bike riding in my free time.</p>
                                             <div>
-                                                <div class="my-icon">
+                                                <div class="my-icon my-padding-0 my-color-white my-background-color-orange">
                                                     <img src="img/icons/main/mail.png">
                                                 </div>
-                                                <div class="my-icon">
+                                                <div class="my-icon my-padding-0 my-color-white my-background-color-orange">
                                                     <img src="img/icons/main/facebook.png">
                                                 </div>
-                                                <div class="my-icon">
+                                                <div class="my-icon my-padding-0 my-color-white my-background-color-orange">
                                                     <img src="img/icons/main/pinterest.png">
                                                 </div>
                                             </div>
@@ -369,29 +369,29 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-6 my-invisible my-invisible-card">
+                            <div class="col-xs-6 my-invisible my-invisible-card my-color-grey">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-xs-6">
+                                        <div class="col-xs-6 text-center my-padding-0">
                                             <div>
                                                 <img class="my-teacher" src="img/images/main/classes/team_03.jpg">
-                                                <h5>Katie Willimore</h5>
+                                                <h5 class="my-weight-bold">Katie Willimore</h5>
                                                 <h6>Assistant Teacher</h6>
                                             </div>
                                         </div>
                                         <div class="col-xs-6">
-                                            <div>
+                                            <div class="text-right">
                                                 <img src="img/images/quote.png">
                                             </div>
                                             <p>My name is Katie. I gew up and studied in Canada. This is my second year at Fable and love every minute of it, making the children's learning experience fun.</p>
                                             <div>
-                                                <div class="my-icon">
+                                                <div class="my-icon my-padding-0 my-color-white my-background-color-orange">
                                                     <img src="img/icons/main/dribbble.png">
                                                 </div>
-                                                <div class="my-icon">
+                                                <div class="my-icon my-padding-0 my-color-white my-background-color-orange">
                                                     <img src="img/icons/main/stumbleupon.png">
                                                 </div>
-                                                <div class="my-icon">
+                                                <div class="my-icon my-padding-0 my-color-white my-background-color-orange">
                                                     <img src="img/icons/main/instagram.png">
                                                 </div>
                                             </div>
@@ -410,9 +410,9 @@
                     <div class="container-fluid">
                         <div class="row my-row">
                             <div class="col-xs-6 my-content-1">
-                                <h3>We have been educating children for over fifteen years. Our goal is to create a place that engages each child.</h3>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, exercitationem odio nam aut quam hic totam earum corrupti voluptates? Odio quae deleniti voluptates laudantium praesentium sint a vero delectus consequatur!</p>
-                                <ul>
+                                <h3 class="my-color-purple">We have been educating children for over fifteen years. Our goal is to create a place that engages each child.</h3>
+                                <p class="my-color-grey">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, exercitationem odio nam aut quam hic totam earum corrupti voluptates? Odio quae deleniti voluptates laudantium praesentium sint a vero delectus consequatur!</p>
+                                <ul class="my-color-grey">
                                     <li>Comprehensive reporting on individual achievement</li>
                                     <li>Educational field trips and school presentations</li>
                                     <li>Individual attention in a small-class setting</li>
@@ -424,33 +424,33 @@
                             <div class="col-xs-6">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-xs-6 my-col my-goal-card">
-                                            <div class="my-circle-icon">
+                                        <div class="col-xs-6 my-col my-goal-card text-center">
+                                            <div class="my-circle-icon my-background-color-white">
                                                 <img src="img/icons/main/toy.png">
                                             </div>
-                                            <h4>learning & fun</h4>
+                                            <h4 class="text-capitalize my-color-purple">learning & fun</h4>
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                         </div>
-                                        <div class="col-xs-6 my-col my-goal-card">
-                                            <div class="my-circle-icon">
+                                        <div class="col-xs-6 my-col my-goal-card text-center">
+                                            <div class="my-circle-icon my-background-color-white">
                                                 <img src="img/icons/main/meal.png">
                                             </div>
-                                            <h4>healthy meals</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <h4 class="text-capitalize my-color-purple">healthy meals</h4>
+                                            <p class="my-color-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                         </div>
-                                        <div class="col-xs-6 my-col my-goal-card">
-                                            <div class="my-circle-icon">
+                                        <div class="col-xs-6 my-col my-goal-card text-center">
+                                            <div class="my-circle-icon my-background-color-white">
                                                 <img src="img/icons/main/school.png">
                                             </div>
-                                            <h4>friendly place</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <h4 class="text-capitalize my-color-purple">friendly place</h4>
+                                            <p class="my-color-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                         </div>
-                                        <div class="col-xs-6 my-col my-goal-card">
-                                            <div class="my-circle-icon">
+                                        <div class="col-xs-6 my-col my-goal-card text-center">
+                                            <div class="my-circle-icon my-background-color-white">
                                                 <img src="img/icons/main/shield.png">
                                             </div>
-                                            <h4>children safety</h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <h4 class="text-capitalize my-color-purple">children safety</h4>
+                                            <p class="my-color-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -464,27 +464,27 @@
             <section id="images">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xs-3">
+                        <div class="col-xs-3 my-padding-0">
                             <img src="img/images/main/overview/gallery_01.jpg">
-                            <div class="my-circle-icon my-invisible">
+                            <div class="my-circle-icon my-invisible my-background-color-purple">
                                 <img src="img/icons/footer/map/image.svg">
                             </div>
                         </div>
-                        <div class="col-xs-3">
+                        <div class="col-xs-3 my-padding-0">
                             <img src="img/images/main/overview/gallery_02.jpg">
-                            <div class="my-circle-icon my-invisible">
+                            <div class="my-circle-icon my-invisible my-background-color-purple">
                                 <img src="img/icons/footer/map/image.svg">
                             </div>
                         </div>
-                        <div class="col-xs-3">
+                        <div class="col-xs-3 my-padding-0">
                             <img src="img/images/main/overview/gallery_03.jpg">
-                            <div class="my-circle-icon my-invisible">
+                            <div class="my-circle-icon my-invisible my-background-color-purple">
                                 <img src="img/icons/footer/map/image.svg">
                             </div>
                         </div>
-                        <div class="col-xs-3">
+                        <div class="col-xs-3 my-padding-0">
                             <img src="img/images/main/overview/gallery_04.jpg">
-                            <div class="my-circle-icon my-invisible">
+                            <div class="my-circle-icon my-invisible my-background-color-purple">
                                 <img src="img/icons/footer/map/image.svg">
                             </div>
                         </div>
@@ -493,10 +493,10 @@
             </section>
             <!-- /images -->
             <!-- gallery -->
-            <section id="gallery" class="my-stripe">
+            <section id="gallery" class="my-stripe my-color-white my-background-color-purple">
                 <div class="my-wrapper">
-                    <h3>See Our Kindergarten Photo Gallery!</h3>
-                    <button class="my-button-transparent">
+                    <h3 class="my-margin-0">See Our Kindergarten Photo Gallery!</h3>
+                    <button class="my-button-transparent text-uppercase my-color-white">
                         view gallery
                         <div class="my-chevron">
                             <img src="img/icons/chevron_up.png">
@@ -506,7 +506,7 @@
             </section>
             <!-- /gallery -->
             <!-- slider -->
-            <section id="slider">
+            <section id="slider" class="text-center my-color-white">
                 <div class="my-wrapper">
                     <div class="my-circle-icon">
                         <img src="img/icons/main/quote_alt.png">
@@ -526,13 +526,13 @@
             </section>
             <!-- /slider -->
             <!-- new -->
-            <section id="new">
+            <section id="new" class="my-background-color-white">
                 <div class="my-wrapper">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xs-12 my-standard-title">
-                                <h1>What's New</h1>
-                                <h5>Keep up to date with the latest news</h5>
+                            <div class="col-xs-12 my-standard-title text-center">
+                                <h1 class="my-color-purple">What's New</h1>
+                                <h5 class="my-color-grey">Keep up to date with the latest news</h5>
                                 <img src="img/images/header_divider.png">
                             </div>
                         </div>
@@ -541,19 +541,19 @@
                                 <h5>October 03, 2014</h5>
                                 <div>
                                     <img src="img/images/main/new/blog_09.jpg">
-                                    <div class="my-number">42</div>
+                                    <div class="my-number my-color-white my-background-color-orange">42</div>
                                 </div>
-                                <h4>Drawing and Painting Lessons</h4>
+                                <h4 class="my-color-purple">Drawing and Painting Lessons</h4>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum rerum magnam quaerat. Tenetur illo quos blanditiis reprehenderit corrupti autem odit iste quam, quibusdam neque nihil quasi deserunt numquam odio libero.</p>
                                 <hr>
                                 <div>
                                     <span>
                                         <img src="img/icons/main/author.png">
-                                        <h6>Anna Brown</h6>
+                                        <h6 class="my-margin-0 text-capitalize">Anna Brown</h6>
                                     </span>
                                     <span>
                                         <img src="img/icons/main/category.png">
-                                        <h6>Events, Fun</h6>
+                                        <h6 class="text-capitalize">Events, Fun</h6>
                                     </span>
                                 </div>
                             </div>
@@ -561,19 +561,19 @@
                                 <h5>October 03, 2014</h5>
                                 <div>
                                     <img src="img/images/main/new/blog_10.jpg">
-                                    <div class="my-number">19</div>
+                                    <div class="my-number my-color-white my-background-color-orange">19</div>
                                 </div>
-                                <h4>Fall Parents Meeting Day</h4>
+                                <h4 class="my-color-purple">Fall Parents Meeting Day</h4>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum rerum magnam quaerat. Tenetur illo quos blanditiis reprehenderit corrupti autem odit iste quam, quibusdam neque nihil quasi deserunt numquam odio libero.</p>
                                 <hr>
                                 <div>
                                     <span>
                                         <img src="img/icons/main/author.png">
-                                        <h6>Anna Brown</h6>
+                                        <h6 class="my-margin-0 text-capitalize">Anna Brown</h6>
                                     </span>
                                     <span>
                                         <img src="img/icons/main/category.png">
-                                        <h6>Dance, Education</h6>
+                                        <h6 class="text-capitalize">Dance, Education</h6>
                                     </span>
                                 </div>
                             </div>
@@ -581,26 +581,26 @@
                                 <h5>Septemper 20, 2014</h5>
                                 <div>
                                     <img src="img/images/main/new/blog_08.jpg">
-                                    <div class="my-number">22</div>
+                                    <div class="my-number my-color-white my-background-color-orange">22</div>
                                 </div>
-                                <h4>Birthday in Kindergarten</h4>
+                                <h4 class="my-color-purple">Birthday in Kindergarten</h4>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum rerum magnam quaerat. Tenetur illo quos blanditiis reprehenderit corrupti autem odit iste quam, quibusdam neque nihil quasi deserunt numquam odio libero.</p>
                                 <hr>
                                 <div>
                                     <span>
                                         <img src="img/icons/main/author.png">
-                                        <h6>Anna Brown</h6>
+                                        <h6 class="my-margin-0 text-capitalize">Anna Brown</h6>
                                     </span>
                                     <span>
                                         <img src="img/icons/main/category.png">
-                                        <h6>Games, General</h6>
+                                        <h6 class="text-capitalize">Games, General</h6>
                                     </span>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col-xs-12">
-                                <button class="my-button-orange">
+                                <button class="my-button-orange text-uppercase my-color-white my-background-color-orange">
                                     go to blog
                                     <div class="my-chevron">
                                         <img src="img/icons/chevron_up.png">
@@ -622,12 +622,12 @@
                 <div class="my-puzzle">
                     <img v-for="number in footer.map.nImages" :src="footer.map.pathStart + number + footer.map.pathEnd">
                 </div>
-                <div class="my-coordinates">
+                <div class="my-coordinates my-background-color-white">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xs-9">
-                                <h5>{{footer.map.coordinates}}</h5>
-                                <h6>{{footer.map.address}}</h6>
+                                <h5 class="my-weight-bold">{{footer.map.coordinates}}</h5>
+                                <h6 class="my-color-grey">{{footer.map.address}}</h6>
                                 <h6>Visualizza mappa più grande</h6>
                             </div>
                             <div class="col-xs-3">
@@ -642,29 +642,29 @@
                 <div class="my-satellite">
                     <img src="img/images/map/kh.jpeg">
                 </div>
-                <div class="my-zoom">
+                <div class="my-zoom my-background-color-white">
                     <img src="img/icons/footer/map/image.svg">
-                    <hr>
+                    <hr class="my-margin-0">
                     <img src="img/icons/footer/map/image (1).svg">
                 </div>
             </section>
             <!-- /map -->
             <!-- contacts -->
-            <section id="contacts">
+            <section id="contacts" class="my-background-color-white">
                 <div class="my-wrapper">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-xs-12 my-standard-title">
-                                <h1>Contact Us</h1>
-                                <h5>Our postal address and contact details</h5>
+                            <div class="col-xs-12 my-standard-title text-center">
+                                <h1 class="my-color-purple">Contact Us</h1>
+                                <h5 class="my-color-grey">Our postal address and contact details</h5>
                                 <img src="img/images/header_divider.png">
                             </div>
                         </div>
                         <div class="row">
-                            <div v-for="(contact,index) in footer.contacts.contents" class="col-xs-3 my-goal-card">
+                            <div v-for="(contact,index) in footer.contacts.contents" class="col-xs-3 my-goal-card text-center">
                                 <img :src="footer.contacts.pathStart + (index + 1) + footer.contacts.pathEnd">
-                                <h4>{{contact.name}}</h4>
-                                <p v-for="line in contact.text">{{line}}</p>
+                                <h4 class="text-capitalize my-color-purple">{{contact.name}}</h4>
+                                <p v-for="line in contact.text" class="my-margin-0">{{line}}</p>
                             </div>
                         </div>
                         <div class="row my-row">
@@ -677,9 +677,9 @@
                                 <textarea cols="30" rows="10" placeholder="your message *"></textarea>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col-xs-12">
-                                <button class="my-button-orange">send message</button>
+                                <button class="my-button-orange text-uppercase my-color-white my-background-color-orange">send message</button>
                             </div>
                         </div>
                     </div>
